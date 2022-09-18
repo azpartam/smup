@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7439164282193498562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7439164282193498566}
+  - component: {fileID: 7439164282193498564}
+  - component: {fileID: 7439164282193498563}
+  - component: {fileID: 7439164282193498568}
+  - component: {fileID: 7439164282193498567}
+  m_Layer: 3
+  m_Name: SpaceShip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7439164282193498566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439164282193498562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.06999993, z: -8.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7918620205864097877}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7439164282193498564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439164282193498562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772317deb1e00b4458210887956f715e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max_velocity: 15
+  velocity: {x: 0, y: 0, z: 0}
+  speed: 5
+--- !u!114 &7439164282193498563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439164282193498562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db98774004ac004fa971bf5627debeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 992784412266619072, guid: b71a8e45fc43708479537582b3a71139, type: 3}
+  healthBar: {fileID: 0}
+  health: 100
+  maxHealth: 100
+--- !u!136 &7439164282193498568
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439164282193498562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.6053841
+  m_Height: 1.7264729
+  m_Direction: 2
+  m_Center: {x: 0.10538411, y: 0, z: 0.05815792}
+--- !u!54 &7439164282193498567
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439164282193498562}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 50
+  m_CollisionDetection: 0
+--- !u!1001 &7439164283044820338
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7439164282193498566}
+    m_Modifications:
+    - target: {fileID: 781849108387884324, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_Name
+      value: SpaceshipModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884324, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.003364563
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0054597855
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849109106446367, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849109106585122, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 781849109762787640, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5161462130941415033, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+--- !u!4 &7918620205864097877 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 781849108387884327, guid: ff12d369795452949b36f2824ee53e21, type: 3}
+  m_PrefabInstance: {fileID: 7439164283044820338}
+  m_PrefabAsset: {fileID: 0}
