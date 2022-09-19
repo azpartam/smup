@@ -48,9 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 772317deb1e00b4458210887956f715e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_velocity: 15
-  velocity: {x: 0, y: 0, z: 0}
-  speed: 5
+  inputSpeed: 6
+  idleSpeed: 2
 --- !u!114 &7439164282193498563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,11 +62,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db98774004ac004fa971bf5627debeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 992784412266619072, guid: b71a8e45fc43708479537582b3a71139, type: 3}
-  healthBar: {fileID: 0}
-  health: 100
-  maxHealth: 100
+  m_reloadTime: 0.2
+  m_weapons: []
+  m_healthBar: {fileID: 0}
+  m_maxHealth: 0
 --- !u!136 &7439164282193498568
 CapsuleCollider:
   m_ObjectHideFlags: 0

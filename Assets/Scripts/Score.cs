@@ -7,8 +7,16 @@ public class Score : MonoBehaviour
     [SerializeField]
     TMPro.TextMeshProUGUI m_ScoreText;
 
-    public void SetValue(int _newValue)
+    private void Start()
+    {
+        GameMananger.OnScoreChanged += UpdateValue;
+    }
+    public void UpdateValue()
     { 
-        m_ScoreText.text = $"{_newValue}";
+        m_ScoreText.text = $"{GameMananger.Instance.Score}";
+    }
+    private void OnDestroy()
+    {
+        GameMananger.OnScoreChanged -= UpdateValue;
     }
 }

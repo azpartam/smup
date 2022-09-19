@@ -5,7 +5,7 @@ using UnityEngine;
 //is game object completely out of the screen
 static class SmupUtils
 {
-    static public bool IsGameObjectOnScreen(Vector3 extents, Vector3 position)
+    static public bool IsGameObjectOffScreen(Vector3 extents, Vector3 position)
     {
         Vector3 screenUpperRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.x));
         Vector3 screenLowerLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Camera.main.transform.position.x));

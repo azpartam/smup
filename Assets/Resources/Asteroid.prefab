@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4026661853049088197}
   - component: {fileID: 1925354934498641068}
   - component: {fileID: 1301618848538282165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,8 @@ GameObject:
   - component: {fileID: 4143341950228828790}
   - component: {fileID: 8982423997803800225}
   - component: {fileID: 5682815706315263751}
-  m_Layer: 0
+  - component: {fileID: 8393218813133514980}
+  m_Layer: 6
   m_Name: Asteroid
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -123,9 +124,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2796609993697972421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.952, y: 1.1794107, z: 8.274455}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5752125426353221612}
   - {fileID: 2058469983363143597}
@@ -144,8 +145,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.750746
-  m_Center: {x: 0, y: 0, z: -0.250746}
+  m_Radius: 0.961504
+  m_Center: {x: 0, y: 0, z: -0.03998804}
 --- !u!114 &5682815706315263751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +164,25 @@ MonoBehaviour:
   m_speed: 3
   damage: 10
   valueInPoints: 10
-  m_rotationSpeed: 0.3
+  valuePerHit: 5
+  explosionPrefab: {fileID: 6253561428522850514, guid: 4be08cd8028cff545a9bcebb51111279, type: 3}
+  m_rotationSpeed: 45
+--- !u!54 &8393218813133514980
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2796609993697972421}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 2
+  m_CollisionDetection: 0
 --- !u!1 &4823098183845376695
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +195,7 @@ GameObject:
   - component: {fileID: 6855071942470246405}
   - component: {fileID: 8796152287026994311}
   - component: {fileID: 7334899995934521243}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +292,7 @@ GameObject:
   - component: {fileID: 4786770733985331586}
   - component: {fileID: 1285403839968198931}
   - component: {fileID: 6364404538556229844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

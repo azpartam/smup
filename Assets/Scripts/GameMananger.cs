@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameMananger : MonoBehaviour
 {
     private static GameMananger m_instance;
-
     public static GameMananger Instance
     {
         get {
@@ -20,9 +19,9 @@ public class GameMananger : MonoBehaviour
             }
 
             return m_instance;
-        }
-            
+        }            
     }
+
     public enum GameState { Start, InGame, GameOver, GameFinished };
 
     private GameState m_gameState;
@@ -30,6 +29,9 @@ public class GameMananger : MonoBehaviour
 
     public GameState gameState { get => m_gameState; }
     public int Score { get => m_score; }
+    public delegate void ScoreChanged();
+    public static event ScoreChanged OnScoreChanged;
+
 
     void Awake()
     {
@@ -53,13 +55,15 @@ public class GameMananger : MonoBehaviour
         if ((m_gameState == GameState.GameOver || m_gameState == GameState.GameFinished) && Input.GetKeyDown(KeyCode.Return))
         {
             m_gameState = GameState.Start;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Menu");
         }
     }
 
     public void IncreaseScore(int _points)
     {
         m_score += _points;
+        if (OnScoreChanged is not null)
+            OnScoreChanged();
     }
 
     public void PlayerDied()
@@ -79,7 +83,7 @@ public class GameMananger : MonoBehaviour
     public void StartGame()
     {
         m_gameState = GameState.InGame;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1;
         m_score = 0;
     }

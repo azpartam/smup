@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     public Vector3 direction = Vector3.forward;
     public float damage = 5;
     [SerializeField]
-    float lifeTime = 5;
+    float lifeTime = 4;
 
     public enum BulletType
     { 
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime, Space.World);
-        m_markedForDestroy |= SmupUtils.IsGameObjectOnScreen(Vector3.zero, Vector3.one);
+      
     }
 
     private void LateUpdate()
