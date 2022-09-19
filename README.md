@@ -17,6 +17,9 @@ Winning condition:
 	-points for enemy shot
 	-extra points if enemy is killed
 
+Losing condition:
+- out of health
+- contact with an enemy
 
 
 About the project- thigs i would have done differently:
