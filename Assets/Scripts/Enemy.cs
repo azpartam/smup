@@ -69,7 +69,7 @@ public class Enemy : EnemyBase
         GameObject bullet = Instantiate(targetingBulletPrefab, position, rotation);
         bullet.name = $"EnemyBullet";
         Bullet bulletComponent = bullet.GetComponent<Bullet>();      
-        //target player's curernt position
+        //target player's current position
         Vector3 newDir = (m_playerRef.transform.position - position).normalized;
         bulletComponent.direction = newDir;
     }
